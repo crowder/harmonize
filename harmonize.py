@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import sys
@@ -6,7 +6,7 @@ import os
 import re
 import datetime
 import requests
-import ConfigParser
+import configparser
 
 """
 Harmonize - Harmontown downloading script.
@@ -52,7 +52,7 @@ EXIT_PARAM_ERROR = 2
 
 ONE_DAY = datetime.timedelta(days=1)
 
-config = ConfigParser.SafeConfigParser({'url': 'http://download.harmontown.com/video', 'destination': 'temp'})
+config = configparser.ConfigParser({'url': 'http://download.harmontown.com/video', 'destination': 'temp'})
 config.read('harmonize.cfg')
 
 HARMONTOWN_URL = config.get('DEFAULT', 'url')
